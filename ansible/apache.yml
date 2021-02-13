@@ -1,0 +1,17 @@
+---
+- hosts : localhost
+  tasks:
+  - name: install apache
+    apt:
+      name: apache2
+      state: latest
+      update_cache: yes
+  #- name: set the apache's enviroment variables
+  #    action: command source /etc/apache2/envvars
+
+ # - name: modify apache runtime dir
+ #   lineinfile:
+ #     path: /etc/apache2/apache2.conf
+ #     regexp: '^DefaultRuntimeDir'
+ #     line: DefaultRuntimeDir /var/www/html
+
